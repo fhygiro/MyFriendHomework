@@ -48,7 +48,7 @@ class App:
         self.button = Button(bg='light pink', text='Вычислить ИМТ', command=self.calc_bmi)  # кнопка "Вычислить ИМТ"
         self.button.pack(fill=X, anchor="center", padx=20, pady=5, ipady=20, expand=True)
 
-        self.root.protocol("WM_DELETE_WINDOW")  # завершение программы
+        self.root.protocol("WM_DELETE_WINDOW", self.win_close)  # завершение программы
 
         self.root.mainloop()
 
